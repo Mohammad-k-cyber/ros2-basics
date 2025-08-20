@@ -309,5 +309,5 @@ chmod +x src/turtlesim_test/turtlesim_test/*.py
 ---
 
 **License**: MIT  
-**Maintainer**: cyberai  
+**Maintainer**: CyberAi  
 **Package Version**: 0.0.0
