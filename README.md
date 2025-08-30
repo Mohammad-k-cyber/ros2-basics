@@ -1,4 +1,5 @@
 
+
 ---
 
 # ROS2 Learning Project (Turtlesim + URDF Robot Arm)
@@ -9,7 +10,7 @@ A comprehensive ROS2 workspace demonstrating fundamental concepts in two parts:
    Covers publishers, services, parameters, actions, keyboard control, and launch files.
 
 2. **Robot Description Package (`my_robot_description`)**
-   Defines a 3-DOF robotic arm using URDF with black/blue link coloring, viewable in RViz2, and controlled via `joint_state_publisher_gui`.
+   Defines a 3-DOF robotic arm using your `my_robot_arm.urdf` file, viewable in RViz2, and controlled via `joint_state_publisher_gui`.
 
 ---
 
@@ -82,7 +83,7 @@ source install/setup.bash
 
 | File                             | Purpose                                                               |
 | -------------------------------- | --------------------------------------------------------------------- |
-| `urdf/simple_arm.urdf`           | Defines 3-DOF robot arm (black + blue links)                          |
+| `urdf/my_robot_arm.urdf`         | Defines 3-DOF robot arm (black + blue links)                          |
 | `launch/display.launch.py`       | Starts `robot_state_publisher`, `joint_state_publisher_gui`, and RViz |
 | `rviz/display.rviz`              | Preconfigured RViz2 visualization                                     |
 | `package.xml` / `CMakeLists.txt` | Dependencies and build setup                                          |
@@ -106,7 +107,7 @@ ros2-basics/
 │   │   ├── package.xml
 │   │   └── setup.py
 │   └── my_robot_description/          # Part 2: Robot description
-│       ├── urdf/simple_arm.urdf
+│       ├── urdf/my_robot_arm.urdf
 │       ├── launch/display.launch.py
 │       ├── rviz/display.rviz
 │       ├── package.xml
@@ -163,7 +164,7 @@ ros2 launch my_robot_description display.launch.py
 
 ### My Robot Description
 
-* **URDF**: Robot model (3 revolute joints)
+* **URDF**: Robot model (`my_robot_arm.urdf`) with 3 revolute joints
 * **Launch**: Combines `robot_state_publisher` + RViz2
 * **RViz Config**: Displays model and TF tree
 
@@ -195,7 +196,7 @@ source install/setup.bash
 **URDF errors**
 
 ```bash
-check_urdf src/my_robot_description/urdf/simple_arm.urdf
+check_urdf src/my_robot_description/urdf/my_robot_arm.urdf
 ```
 
 ---
